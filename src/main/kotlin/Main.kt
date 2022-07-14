@@ -48,12 +48,14 @@ object WallService {
     private var posts = emptyArray<Post>()
     private var postId = 0
 
+    //adding new posts with growing ID number
     fun add(post: Post): Post {
         postId++
         posts += post.copy(id = postId)
         return posts.last()
     }
 
+    //updating existing post by finding it by its ID
     fun update(post: Post): Boolean {
         for ((index, postedPosts) in posts.withIndex()) {
             if (postedPosts.id == post.id) {
@@ -122,7 +124,7 @@ fun main() {
         likes = Likes()
     )
 
-    println(WallService.update(postingPost2updated))
+    WallService.update(postingPost2updated)
 
     WallService.showAllPosts()
 }
