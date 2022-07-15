@@ -7,7 +7,6 @@ class WallServiceTest {
     val testPost1 = Post(
         ownerId = 100,
         fromId = 200,
-        createdBy = 300,
         date = 100_000,
         text = "Test post 1",
         comment = Comment(),
@@ -18,7 +17,6 @@ class WallServiceTest {
     val testPost2 = Post(
         ownerId = 100,
         fromId = 200,
-        createdBy = 300,
         date = 100_001,
         text = "Test Post 2",
         comment = Comment(),
@@ -30,7 +28,6 @@ class WallServiceTest {
         id = 2,
         ownerId = 100,
         fromId = 200,
-        createdBy = 300,
         date = 100_002,
         text = "Test Post 3",
         comment = Comment(),
@@ -42,7 +39,6 @@ class WallServiceTest {
         id = 100,
         ownerId = 100,
         fromId = 200,
-        createdBy = 300,
         date = 100_002,
         text = "Test Post 4",
         comment = Comment(),
