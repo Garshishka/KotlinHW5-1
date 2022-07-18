@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d89b8e62-89c2-4b50-862a-c5f2c69603de" name="Changes" comment="Made some properties of class post nullable">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Post.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/WallService.kt" afterDir="false" />
+    <list default="true" id="d89b8e62-89c2-4b50-862a-c5f2c69603de" name="Changes" comment="Moved Post class and its additional classes in their own file&#10;Moved WallService object in its own fie">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Attachment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/AudioAttachment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/DocumentAttachment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/LinkAttachment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/NoteAttachment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/PhotoAttachment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Post.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Post.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +39,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit4 Test Class" />
+        <option value="Kotlin Interface" />
         <option value="Kotlin Class" />
       </list>
     </option>
@@ -144,29 +150,6 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="WallServiceTest.showAllPosts_notEmpty" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;WallServiceTest.showAllPosts_notEmpty&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="WallServiceTest.update_foundPost" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -190,13 +173,20 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainKt" />
+      <module name="KotlinHW5-1.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.MainKt" />
         <item itemvalue="Gradle.KotlinHW5-1 [test jacocoTestReport]" />
         <item itemvalue="Gradle.WallServiceTest" />
         <item itemvalue="Gradle.WallServiceTest.update_foundPost" />
         <item itemvalue="Gradle.KotlinHW5-1 [test]" />
-        <item itemvalue="Gradle.WallServiceTest.showAllPosts_notEmpty" />
       </list>
     </recent_temporary>
   </component>
@@ -230,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657806538358</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Moved Post class and its additional classes in their own file&#10;Moved WallService object in its own fie">
+      <created>1658146081023</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1658146081023</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -261,6 +258,7 @@
     <MESSAGE value="Workflow update" />
     <MESSAGE value="Create main.yml" />
     <MESSAGE value="Workflow+some comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Workflow+some comments" />
+    <MESSAGE value="Moved Post class and its additional classes in their own file&#10;Moved WallService object in its own fie" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved Post class and its additional classes in their own file&#10;Moved WallService object in its own fie" />
   </component>
 </project>
