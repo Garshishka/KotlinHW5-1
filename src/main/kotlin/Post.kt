@@ -20,7 +20,9 @@ data class Post(
     val canEdit: Boolean = true,
     val isPinned: Boolean = false,
     val markedAsAds: Boolean = false,
-    val isFavorite: Boolean = false
+    val isFavorite: Boolean = false,
+
+    val attachments: Array<Attachment>? = null
 )
 
 data class Comment(
@@ -29,6 +31,7 @@ data class Comment(
     val groupsCanPost: Boolean = true,
     val canOpen: Boolean = true,
     val canClose: Boolean = true
+
 )
 
 data class Likes(
