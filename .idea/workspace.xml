@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d89b8e62-89c2-4b50-862a-c5f2c69603de" name="Changes" comment="Moved Post class and its additional classes in their own file&#10;Moved WallService object in its own fie">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Attachment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/AudioAttachment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/DocumentAttachment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/LinkAttachment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/NoteAttachment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/PhotoAttachment.kt" afterDir="false" />
+    <list default="true" id="d89b8e62-89c2-4b50-862a-c5f2c69603de" name="Changes" comment="Added attachments classes and modified Main for showing them">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Attachment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Attachment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Post.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Post.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/WallService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/WallService.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +79,7 @@
       <command value="gradle test jacocoTestReport" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.KotlinHW5-1 [test jacocoTestReport]">
+  <component name="RunManager" selected="Kotlin.MainKt">
     <configuration name="KotlinHW5-1 [test jacocoTestReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />

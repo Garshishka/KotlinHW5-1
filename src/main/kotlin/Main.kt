@@ -44,9 +44,6 @@ fun main() {
         fromId = 231230,
         date = 234124,
         text = "Hi all!",
-        comment = Comment(),
-        reposts = Reposts(),
-        likes = Likes(),
         attachments = arrayOf(photoAttachment1, photoAttachment2)
     )
 
@@ -55,16 +52,31 @@ fun main() {
         fromId = 231230,
         date = 234124,
         text = "This is my second post",
-        comment = Comment(),
-        reposts = Reposts(),
-        likes = Likes(),
         attachments = arrayOf(audioAttachment1,linkAttachment1,linkAttachment2)
+    )
+
+    val comment1 = Comment(
+        fromId = 231230,
+        date = 234512,
+        text = "I'm commenting!"
+    )
+
+    val comment2 = Comment(
+        fromId = 846412,
+        date = 234519,
+        text = "I'm commenting on your comment!",
+        replyToComment = 1
     )
 
     WallService.add(postingPost1)
     WallService.add(postingPost2)
 
     WallService.showAllPosts()
+
+    WallService.createComment(1,comment1)
+    WallService.createComment(1,comment2)
+
+    WallService.showAllComments()
 
 /*
     val postingPost2updated = Post(

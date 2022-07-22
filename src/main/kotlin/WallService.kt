@@ -1,6 +1,16 @@
 object WallService {
     private var posts = emptyArray<Post>()
     private var postId = 0
+    private var comments = emptyArray<Comment>()
+
+    fun findById(postId: Int):Post?{
+        for(post in posts){
+            if(post.id == postId){
+                return post
+            }
+        }
+        return null
+    }
 
     //adding new posts with growing ID number
     fun add(post: Post): Post {
@@ -20,6 +30,14 @@ object WallService {
         return false
     }
 
+    //If there is a post with specified ID, we add a comment to the comment stack
+    fun createComment(postId: Int, comment: Comment): Comment {
+        val post = findById(postId)?: throw PostNotFoundException("no post with $postId")
+        post.commentInfo.count++
+        comments += comment.copy(id =post.commentInfo.count , parentStack = comments, thread = post.commentInfo)
+        return comments.last()
+    }
+
     //For showing all posts in main
     fun showAllPosts(): Boolean {
         if (posts.isNotEmpty()) {
@@ -33,9 +51,23 @@ object WallService {
         }
     }
 
+    fun showAllComments(): Boolean {
+        if (comments.isNotEmpty()) {
+            for (comment in comments) {
+                println(comment)
+            }
+            return true
+        } else {
+            println("There are no comments!")
+            return false
+        }
+    }
+
     //For testing purposes cleaning the array in signleton
     fun clearPosts() {
         postId = 0
         posts = emptyArray<Post>()
     }
+
+    class PostNotFoundException(message: String): RuntimeException(message)
 }

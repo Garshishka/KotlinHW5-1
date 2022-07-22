@@ -8,9 +8,9 @@ data class Post(
     val replyOwnerId: Int? = null,
     val replyPostId: Int? = null,
     val friendsOnly: Boolean = false,
-    val comment: Comment,
+    val commentInfo: CommentsInfo = CommentsInfo(), //changing from vk name for clearer name
     val copyright: String? = null,
-    val likes: Likes,
+    val likes: Likes = Likes(),
     val reposts: Reposts? = null,
     val views: Int = 0,
     val postType: String = "post",
@@ -22,16 +22,27 @@ data class Post(
     val markedAsAds: Boolean = false,
     val isFavorite: Boolean = false,
 
-    val attachments: Array<Attachment>? = null
+    val attachments: Array<Attachment>? = null,
 )
 
 data class Comment(
-    val count: Int = 0,
+    val id: Int = 0,
+    val fromId: Int,
+    val date: Int,
+    val text: String,
+    val parentStack : Array<Comment> = emptyArray(),
+    val thread : CommentsInfo = CommentsInfo(),
+    val attachments: Array<Attachment>? = null,
+    val replyToUser: Int? = null,
+    val replyToComment: Int? = null
+)
+
+data class CommentsInfo(
+    var count: Int = 0,
     val canPost: Boolean = true,
     val groupsCanPost: Boolean = true,
     val canOpen: Boolean = true,
     val canClose: Boolean = true
-
 )
 
 data class Likes(
