@@ -1,6 +1,6 @@
 interface Attachment {
     val type: String
-    val attached : Any
+    val attached: Any
 
-    override fun toString() : String
+    override fun toString(): String
 }

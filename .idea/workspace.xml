@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d89b8e62-89c2-4b50-862a-c5f2c69603de" name="Changes" comment="Moved Post class and its additional classes in their own file&#10;Moved WallService object in its own fie">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Attachment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/AudioAttachment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/DocumentAttachment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/LinkAttachment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/NoteAttachment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/PhotoAttachment.kt" afterDir="false" />
+    <list default="true" id="d89b8e62-89c2-4b50-862a-c5f2c69603de" name="Changes" comment="Added comment class to Posts and comment system to WallService">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Post.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Post.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/WallService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/WallService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/WallServiceTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/WallServiceTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658146081023</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added comment class to Posts and comment system to WallService">
+      <created>1658501832858</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1658501832858</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -259,6 +260,7 @@
     <MESSAGE value="Create main.yml" />
     <MESSAGE value="Workflow+some comments" />
     <MESSAGE value="Moved Post class and its additional classes in their own file&#10;Moved WallService object in its own fie" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moved Post class and its additional classes in their own file&#10;Moved WallService object in its own fie" />
+    <MESSAGE value="Added comment class to Posts and comment system to WallService" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added comment class to Posts and comment system to WallService" />
   </component>
 </project>
