@@ -9,9 +9,6 @@ class WallServiceTest {
         fromId = 200,
         date = 100_000,
         text = "Test post 1",
-        comment = Comment(),
-        reposts = Reposts(),
-        likes = Likes()
     )
 
     val testPost2 = Post(
@@ -19,9 +16,6 @@ class WallServiceTest {
         fromId = 200,
         date = 100_001,
         text = "Test Post 2",
-        comment = Comment(),
-        reposts = Reposts(),
-        likes = Likes()
     )
 
     val testPost3 = Post(  //with right ID for udpate
@@ -30,9 +24,6 @@ class WallServiceTest {
         fromId = 200,
         date = 100_002,
         text = "Test Post 3",
-        comment = Comment(),
-        reposts = Reposts(),
-        likes = Likes()
     )
 
     val testPost4 = Post(  //with wrong ID for update
@@ -41,9 +32,6 @@ class WallServiceTest {
         fromId = 200,
         date = 100_002,
         text = "Test Post 4",
-        comment = Comment(),
-        reposts = Reposts(),
-        likes = Likes()
     )
 
     @Test

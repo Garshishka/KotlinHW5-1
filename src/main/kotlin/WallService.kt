@@ -51,6 +51,7 @@ object WallService {
         }
     }
 
+    //For showing all comments in main
     fun showAllComments(): Boolean {
         if (comments.isNotEmpty()) {
             for (comment in comments) {
