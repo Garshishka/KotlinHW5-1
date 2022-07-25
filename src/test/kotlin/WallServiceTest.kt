@@ -1,6 +1,5 @@
-import org.junit.Test
-
 import org.junit.Assert.*
+import org.junit.Test
 
 class WallServiceTest {
 
@@ -18,7 +17,8 @@ class WallServiceTest {
         text = "Test Post 2",
     )
 
-    val testPost3 = Post(  //with right ID for udpate
+    val testPost3 = Post(
+        //with right ID for udpate
         id = 2,
         ownerId = 100,
         fromId = 200,
@@ -26,7 +26,8 @@ class WallServiceTest {
         text = "Test Post 3",
     )
 
-    val testPost4 = Post(  //with wrong ID for update
+    val testPost4 = Post(
+        //with wrong ID for update
         id = 100,
         ownerId = 100,
         fromId = 200,
@@ -39,7 +40,7 @@ class WallServiceTest {
         WallService.clearPosts()
         val result = WallService.add(testPost1).id
 
-        assertTrue(result!=0)
+        assertTrue(result != 0)
         WallService.clearPosts()
     }
 
@@ -64,14 +65,14 @@ class WallServiceTest {
     }
 
     @Test
-    fun showAllPosts_notEmpty(){
+    fun showAllPosts_notEmpty() {
         WallService.clearPosts()
         WallService.add(testPost1)
         assertTrue(WallService.showAllPosts())
     }
 
     @Test
-    fun showAllPosts_isEmpty(){
+    fun showAllPosts_isEmpty() {
         WallService.clearPosts()
         assertFalse(WallService.showAllPosts())
     }
@@ -83,35 +84,78 @@ class WallServiceTest {
         date = 200,
         text = "test comment 1"
     )
+
     @Test
-    fun createComment_addComment(){
+    fun createComment_addComment() {
         WallService.clearPosts()
         WallService.add(testPost1).id
 
-        val result = WallService.createComment(1,testComment1)
-        assertEquals(result.thread.count,1)
+        val result = WallService.createComment(1, testComment1)
+        assertEquals(result.thread.count, 1)
     }
 
     @Test(expected = WallService.PostNotFoundException::class)
-    fun createComment_addCommentNoId(){
+    fun createComment_addCommentNoId() {
         WallService.clearPosts()
         WallService.add(testPost1).id
 
-        WallService.createComment(100,testComment1)
+        WallService.createComment(100, testComment1)
     }
 
     @Test
-    fun showAllComments_notEmpty(){
+    fun showAllComments_notEmpty() {
         WallService.clearPosts()
         WallService.add(testPost1)
-        WallService.createComment(1,testComment1)
+        WallService.createComment(1, testComment1)
         assertTrue(WallService.showAllComments())
     }
 
     @Test
-    fun showAllComments_isEmpty(){
+    fun showAllComments_isEmpty() {
         WallService.clearPosts()
         WallService.add(testPost1)
         assertFalse(WallService.showAllComments())
+    }
+
+    //reports testing
+    @Test
+    fun createReport_normal() {
+        WallService.clearPosts()
+        WallService.add(testPost1)
+        WallService.createComment(1, testComment1)
+        val result = WallService.createReport(1)
+        assertTrue(result)
+    }
+
+    @Test (expected = WallService.CommentNotFoundException::class)
+    fun createReport_noCommentFound() {
+        WallService.clearPosts()
+        WallService.add(testPost1)
+        WallService.createReport(1)
+    }
+
+    @Test (expected = WallService.WrongReportReasonException::class)
+    fun createReport_wrongReason() {
+        WallService.clearPosts()
+        WallService.add(testPost1)
+        WallService.createComment(1, testComment1)
+        WallService.createReport(1,33)
+    }
+
+    @Test
+    fun showAllReports_notEmpty() {
+        WallService.clearPosts()
+        WallService.add(testPost1)
+        WallService.createComment(1, testComment1)
+        WallService.createReport(1)
+        assertTrue(WallService.showAllReports())
+    }
+
+    @Test
+    fun showAllReports_isEmpty() {
+        WallService.clearPosts()
+        WallService.add(testPost1)
+        WallService.createComment(1, testComment1)
+        assertFalse(WallService.showAllReports())
     }
 }

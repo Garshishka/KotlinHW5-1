@@ -78,10 +78,17 @@ fun main() {
 
     WallService.showAllPosts()
 
+    //comment system
     WallService.createComment(1, comment1)
     WallService.createComment(1, comment2)
 
     WallService.showAllComments()
+
+    //report system
+    WallService.createReport(2)
+    WallService.createReport(2,0)
+
+    WallService.showAllReports()
 
 /*
     val postingPost2updated = Post(
