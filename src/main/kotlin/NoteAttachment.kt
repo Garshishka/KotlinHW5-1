@@ -1,13 +1,6 @@
-class NoteAttachment(
-    val id: Int,
-    val ownerId: Int,
-    val title: String,
-    val text: String,
-    val date: Int,
-    val comments: Int = 0
-) : Attachment {
+class NoteAttachment(note: Note) : Attachment {
     override val type: String = "note"
-    override val attached: Note = Note(id, ownerId, title, text, date)
+    override val attached: Note = note
     override fun toString(): String {
         return (type + ": '" + attached.title + "'")
     }

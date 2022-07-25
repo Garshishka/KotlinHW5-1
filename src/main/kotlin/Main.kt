@@ -1,5 +1,5 @@
 fun main() {
-    val photoAttachment1 = PhotoAttachment(
+    val photo1 = Photo(
         2341,
         34512,
         "Some photo",
@@ -7,8 +7,9 @@ fun main() {
         640,
         480
     )
+    val photoAttachment1 = PhotoAttachment(photo1)
 
-    val photoAttachment2 = PhotoAttachment(
+    val photo2 = Photo(
         2523,
         34512,
         "And another photo",
@@ -16,8 +17,9 @@ fun main() {
         640,
         480
     )
+    val photoAttachment2 = PhotoAttachment(photo2)
 
-    val audioAttachment1 = AudioAttachment(
+    val audio1 = Audio(
         1414,
         35512,
         "Some dude with a piano",
@@ -25,19 +27,22 @@ fun main() {
         3454,
         234543
     )
+    val audioAttachment1 = AudioAttachment(audio1)
 
-    val linkAttachment1 = LinkAttachment(
+    val link1 = Link(
         "https://google.com",
         "where to look for stuff",
         "a link to google"
     )
+    val linkAttachment1 = LinkAttachment(link1)
 
-    val linkAttachment2 = LinkAttachment(
+    val link2 = Link(
         "https://somewhere.com",
         "some link",
         "a link to whatever page",
         "probably works"
     )
+    val linkAttachment2 = LinkAttachment(link2)
 
     val postingPost1 = Post(
         ownerId = 846412,
@@ -52,7 +57,7 @@ fun main() {
         fromId = 231230,
         date = 234124,
         text = "This is my second post",
-        attachments = arrayOf(audioAttachment1,linkAttachment1,linkAttachment2)
+        attachments = arrayOf(audioAttachment1, linkAttachment1, linkAttachment2)
     )
 
     val comment1 = Comment(
@@ -73,8 +78,8 @@ fun main() {
 
     WallService.showAllPosts()
 
-    WallService.createComment(1,comment1)
-    WallService.createComment(1,comment2)
+    WallService.createComment(1, comment1)
+    WallService.createComment(1, comment2)
 
     WallService.showAllComments()
 

@@ -1,11 +1,6 @@
-class LinkAttachment(
-    val url: String,
-    val title: String,
-    val description: String,
-    val caption: String? = null
-) : Attachment {
+class LinkAttachment(link: Link) : Attachment {
     override val type: String = "link"
-    override val attached: Link = Link(url, title, description, caption)
+    override val attached: Link = link
 
     override fun toString(): String {
         return (type + ": '" + attached.title + "' " + (attached.caption ?: ""))
