@@ -68,6 +68,7 @@ object WallService {
     fun clearPosts() {
         postId = 0
         posts = emptyArray<Post>()
+        comments = emptyArray<Comment>()
     }
 
     class PostNotFoundException(message: String): RuntimeException(message)
