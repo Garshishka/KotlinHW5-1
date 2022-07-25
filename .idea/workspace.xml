@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d89b8e62-89c2-4b50-862a-c5f2c69603de" name="Changes" comment="Cleaned up tests to make them working again">
+    <list default="true" id="d89b8e62-89c2-4b50-862a-c5f2c69603de" name="Changes" comment="Added report system and tests for them">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Post.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Post.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/WallService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/WallService.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/WallServiceTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/WallServiceTest.kt" afterDir="false" />
     </list>
@@ -100,28 +102,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="KotlinHW5-1 [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="WallServiceTest.createComment_addCommentNoId" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="WallServiceTest.createReport_noCommentFound" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -134,7 +115,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;WallServiceTest.createComment_addCommentNoId&quot;" />
+            <option value="&quot;WallServiceTest.createReport_noCommentFound&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -144,7 +125,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="WallServiceTest.showAllComments_isEmpty" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="WallServiceTest.createReport_wrongReason" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -157,7 +138,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;WallServiceTest.showAllComments_isEmpty&quot;" />
+            <option value="&quot;WallServiceTest.createReport_wrongReason&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -190,13 +171,20 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainKt" />
+      <module name="KotlinHW5-1.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.KotlinHW5-1 [test jacocoTestReport]" />
-        <item itemvalue="Gradle.WallServiceTest.showAllComments_isEmpty" />
-        <item itemvalue="Gradle.KotlinHW5-1 [test]" />
+        <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="Gradle.WallServiceTest.createReport_wrongReason" />
+        <item itemvalue="Gradle.WallServiceTest.createReport_noCommentFound" />
         <item itemvalue="Gradle.WallServiceTest.showAllComments_notEmpty" />
-        <item itemvalue="Gradle.WallServiceTest.createComment_addCommentNoId" />
+        <item itemvalue="Gradle.KotlinHW5-1 [test jacocoTestReport]" />
       </list>
     </recent_temporary>
   </component>
@@ -251,7 +239,21 @@
       <option name="project" value="LOCAL" />
       <updated>1658752651528</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added tests for comments system">
+      <created>1658753878038</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1658753878038</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Cleaned up attachment system">
+      <created>1658754960140</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1658754960140</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -285,6 +287,9 @@
     <MESSAGE value="Moved Post class and its additional classes in their own file&#10;Moved WallService object in its own fie" />
     <MESSAGE value="Added comment class to Posts and comment system to WallService" />
     <MESSAGE value="Cleaned up tests to make them working again" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up tests to make them working again" />
+    <MESSAGE value="Added tests for comments system" />
+    <MESSAGE value="Cleaned up attachment system" />
+    <MESSAGE value="Added report system and tests for them" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added report system and tests for them" />
   </component>
 </project>

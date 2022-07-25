@@ -37,6 +37,12 @@ data class Comment(
     val replyToComment: Int? = null
 )
 
+data class  Report(
+    val ownerdId: Int,
+    val commentId: Int,
+    val reason: String
+)
+
 data class CommentsInfo(
     var count: Int = 0,
     val canPost: Boolean = true,
